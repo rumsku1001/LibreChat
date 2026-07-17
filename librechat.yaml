@@ -1,0 +1,16 @@
+version: 1.1.5
+cache: true
+endpoints:
+  custom:
+    - name: "Gonka API"
+      apiKey: "${GONKA_API_KEY}"
+      baseURL: "${GONKA_BASE_URL}"
+      models:
+        default:
+          - "MiniMaxAI/MiniMax-M2.7"
+          - "moonshotai/Kimi-K2.6"
+          - "z-ai/glm-5.2"
+        fetch: false
+      titleIcon: "https://gonka-api.org/favicon.ico"
+      addParams:
+        max_tokens: 4000
