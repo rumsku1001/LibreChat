@@ -74,6 +74,10 @@ ENV BUILD_DATE=${BUILD_DATE}
 # Node API setup
 EXPOSE 3080
 ENV HOST=0.0.0.0
+
+COPY librechat.yaml /app/librechat.yaml
+COPY librechat.yaml /app/api/librechat.yaml
+
 CMD ["npm", "run", "backend"]
 
 # Optional: for client with nginx routing
@@ -82,7 +86,3 @@ CMD ["npm", "run", "backend"]
 # COPY --from=node /app/client/dist /usr/share/nginx/html
 # COPY client/nginx.conf /etc/nginx/conf.d/default.conf
 # ENTRYPOINT ["nginx", "-g", "daemon off;"]
-
-
-COPY librechat.yaml /app/librechat.yaml
-COPY librechat.yaml /app/api/librechat.yaml
