@@ -82,3 +82,7 @@ CMD ["npm", "run", "backend"]
 # COPY --from=node /app/client/dist /usr/share/nginx/html
 # COPY client/nginx.conf /etc/nginx/conf.d/default.conf
 # ENTRYPOINT ["nginx", "-g", "daemon off;"]
+
+
+COPY librechat.yaml /app/librechat.yaml
+COPY librechat.yaml /app/api/librechat.yaml
