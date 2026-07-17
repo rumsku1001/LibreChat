@@ -75,8 +75,12 @@ ENV BUILD_DATE=${BUILD_DATE}
 EXPOSE 3080
 ENV HOST=0.0.0.0
 
-COPY librechat.yaml /app/librechat.yaml
-COPY librechat.yaml /app/api/librechat.yaml
+USER root
+RUN apk add --no-cache curl
+RUN curl -o /app/librechat.yaml https://raw.githubusercontent.com/rumsku1001/LibreChat/main/librechat.yaml
+RUN curl -o /app/api/librechat.yaml https://raw.githubusercontent.com/rumsku1001/LibreChat/main/librechat.yaml
+RUN chown node:node /app/librechat.yaml /app/api/librechat.yaml
+USER node
 
 CMD ["npm", "run", "backend"]
 
