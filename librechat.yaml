@@ -14,3 +14,6 @@ endpoints:
       titleIcon: "https://gonka-api.org/favicon.ico" 
       stream: true
       resendFiles: false
+      tools: false
+      actions: false
+      iconURL: "https://gonka-api.org/favicon.ico"
