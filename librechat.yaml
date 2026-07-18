@@ -11,6 +11,7 @@ endpoints:
           - "moonshotai/Kimi-K2.6"
           - "z-ai/glm-5.2"
         fetch: false
-      titleIcon: "https://gonka-api.org/favicon.ico"
+      titleIcon: "https://gonka-api.org/favicon.ico" 
+      stream: false
       addParams:
         max_tokens: 4000
